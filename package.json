@@ -1,0 +1,9 @@
+{
+  "name": "dsh-workspace-launcher",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Session 顶部的工作区环境启动器",
+  "exports": { ".": "./src/runtime.js", "./client": "./src/client.js", "./package.json": "./package.json" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "inject": ["@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-client-ui-slots"] } },
+  "scripts": { "test": "node --test test/launcher.test.mjs" }
+}
